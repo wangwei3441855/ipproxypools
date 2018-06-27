@@ -69,4 +69,16 @@ public class IpContorller extends BaseController {
             return fail(e);
         }
     }
+
+    @RequestMapping("/execute")
+    public Object execute(String id) {
+        try {
+            ipInfoService.execute(id);
+            return success("execute success");
+        } catch (Exception e) {
+            LOG.error("getIpByPage fail", e);
+            return fail(e);
+        }
+    }
+
 }
