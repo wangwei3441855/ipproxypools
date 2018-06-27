@@ -18,7 +18,7 @@ public class StartupRunner implements CommandLineRunner {
     protected QuartzService quartzService;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         log.info("<<<<<<<<<<<<<<<<<<<<<<<<<  StartupRunner.run  >>>>>>>>>>>>>>>>>>>>>");
         try {
             quartzService.startQuartzJob();
